@@ -9,7 +9,8 @@
 /* Navbar */
 
 .navbar{
- justify-content: space-between;
+  background-color: #062338;
+  justify-content: space-between;
   height: 70px;
 }
 
@@ -53,6 +54,40 @@
 /* Project Section */
 
 .projects-section{
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 100px;
+}
+
+.card{
+  border-radius: 18px;
+  height: 268px;
+  background-size: 100%;
+  transition: background-size 0.75s;
+  background-position: center;
+}
+
+.card-body{
+  border-radius: 18px;
+  background-color: #062338;
+  color: white;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.75s;
+}
+
+.card-body-space{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card:hover .card-body{
+  opacity: 1;
+}
+
+.card:hover{
+  background-size: 130%;
+}
+
+/* Add project Item image here */
+.rfc-img{
+  background-image: url(./images/background.jpg);
 }
