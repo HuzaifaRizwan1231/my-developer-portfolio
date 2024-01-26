@@ -1,42 +1,58 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  font-family: 'League Spartan', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+/* Navbar */
+
+.navbar{
+ justify-content: space-between;
+  height: 70px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-brand, .nav-link{
+  color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar-brand{
+  padding-left: 14px !important;
+  font-size: 25px;
 }
 
-.card {
-  padding: 2em;
+.nav-link{
+  margin-right: 20px;
+  font-size: 18px;
 }
 
-.read-the-docs {
-  color: #888;
+
+/* Main Image */
+
+.mainSection{
+  background-color: aqua !important;
+  background-image: url("./images/back.png");
+  color: white;
+  background-size: cover;
+  padding-top: 45vh;
+  padding-bottom: 45vh;
+}
+
+
+.mainText{
+  font-weight: 700;
+  padding-left: 200px;
+}
+
+.typedJSText{
+  color: #44dcec;
+  padding-left: 50px;
+}
+
+/* Project Section */
+
+.projects-section{
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
