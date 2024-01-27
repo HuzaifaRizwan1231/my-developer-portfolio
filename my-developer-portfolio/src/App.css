@@ -87,7 +87,62 @@
   background-size: 130%;
 }
 
+.card-button{
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0px 5px;
+  text-decoration: none;
+}
+
+/* .card-text{
+  font-weight: 400;
+} */
+
+.visit-website-button{
+  color: #062338;
+  background-color: #44dcec;
+}
+
+.see-more-button{
+  border: 1px solid #44dcec;
+  background-color: #062338;
+  color: #44dcec;
+}
+
 /* Add project Item image here */
 .rfc-img{
   background-image: url(./images/background.jpg);
 }
+
+
+
+/* Footer Section */
+
+.footer-section{
+  text-align: center;
+  background-color: #062338;
+  padding: 60px 40px;
+}
+
+.footer-container{
+  border-radius: 40px;
+  padding: 60px;
+  background-color: #44dcec;
+}
+
+.footer-email{
+  font-size: 18px;
+  color: #470e88;
+  text-decoration: none;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.footer-links .nav-link{
+  font-size: 22px;
+}
+

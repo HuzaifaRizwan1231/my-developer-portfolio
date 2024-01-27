@@ -9,9 +9,19 @@ export default function Projects() {
                 <div className="col-md-6">
                     <ProjectItem cardImageClass="rfc-img" title="RFC" description="Heavy restaurant menu app" websiteLink="#"/>
                 </div>
+
                 <div className="col-md-6">
-                <ProjectItem/>
+                    <ProjectItem cardImageClass="rfc-img" title="RFC" description="Heavy restaurant menu app" websiteLink="#"/>
                 </div>
+
+                <div className="col-md-6">
+                    <ProjectItem cardImageClass="rfc-img" title="RFC" description="Heavy restaurant menu app" websiteLink="#"/>
+                </div>
+
+                <div className="col-md-6">
+                    <ProjectItem cardImageClass="rfc-img" title="RFC" description="Heavy restaurant menu app" websiteLink="#"/>
+                </div>
+                
             </div>
 
         </div>
