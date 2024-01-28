@@ -1,18 +1,27 @@
 import './App.css'
 import Footer from './components/Footer'
-import MainImage from './components/MainImage'
 import Navbar from './components/Navbar'
-import Projects from './components/Projects'
+import About from './pages/About';
+import Home from './pages/Home';
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProjectInfo from './pages/ProjectInfo';
 
 function App() {
 
   return (
     <>
- 
-      <Navbar/>
-      <MainImage/>
-      <Projects/>
-      <Footer/>
+      <Router>
+        <Navbar/>
+
+        <Routes>
+          <Route path="/" element={<ProjectInfo/>}/>
+          {/* <Route path="/about" element={<About/>}/> */}
+        </Routes>
+        
+        <Footer/>
+      </Router>
     </>
   )
 }
