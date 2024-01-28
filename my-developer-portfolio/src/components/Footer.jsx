@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer-section">
         <div className="footer-container container">
             <h1>Come Say Hello!</h1>
-            <a href="" className="footer-email">huzaifa.rizwan1231@gmail.com</a>
+            <a href="" className="footer-email"><i class="fa-regular mx-2 fa-envelope"></i>huzaifa.rizwan1231@gmail.com</a>
             </div>
         <div className="footer-links gap-4">
 

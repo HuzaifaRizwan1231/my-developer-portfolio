@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ProjectItem(props) {
   return (
@@ -10,12 +11,12 @@ export default function ProjectItem(props) {
                 <p class="card-text mb-4">
                     {props.description}
                 </p>
-                <a href="#" class="button-class visit-website-button">
+                <Link to={props.websiteLink} target="_blank" class="button-class visit-website-button">
                     Visit Website
-                </a>
-                <a href="#" class="button-class see-more-button">
+                </Link>
+                <Link to={props.seeMoreLink} class="button-class see-more-button">
                     See More
-                </a>
+                </Link>
             </div>
         </div>
       </div>

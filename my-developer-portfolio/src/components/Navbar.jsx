@@ -39,22 +39,22 @@ export default function Navbar() {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
                 <i class="fa-brands fa-github"></i>
                 
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
-                </a>
+                </Link>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="https://www.instagram.com/huzaifa_rizwan1231/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
-                </a>
+                </Link>
               </li>
               {/* <li className="nav-item dropdown">
                 <a

@@ -14,11 +14,14 @@ function App() {
     <>
       <Router>
         <Navbar/>
-
         <Routes>
-          <Route path="/" element={<ProjectInfo/>}/>
-          {/* <Route path="/" element={<Home/>}/> */}
-          {/* <Route path="/about" element={<About/>}/> */}
+          
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+
+          {/* RFC */}
+          <Route path="/restaurantMenuApp" element={<ProjectInfo projectTitle="Restaurant Menu App" projectDescription="Hello Worlds" websiteLink="https://restaurant-menu-app-frontend.vercel.app/" githubLink="https://github.com/HuzaifaRizwan1231/RestaurantMenuApp" features={["one feature", "two feature"]} technologies={[{icon:"fa-brands fa-instagram", name: "Instagram"},{}]}/>}/>
+
         </Routes>
         
         <Footer/>
