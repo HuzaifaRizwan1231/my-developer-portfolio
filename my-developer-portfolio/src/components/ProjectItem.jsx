@@ -10,10 +10,10 @@ export default function ProjectItem(props) {
                 <p class="card-text mb-4">
                     {props.description}
                 </p>
-                <a href="#" class="card-button visit-website-button">
+                <a href="#" class="button-class visit-website-button">
                     Visit Website
                 </a>
-                <a href="#" class="card-button see-more-button">
+                <a href="#" class="button-class see-more-button">
                     See More
                 </a>
             </div>
