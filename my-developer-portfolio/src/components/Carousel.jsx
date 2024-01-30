@@ -28,22 +28,22 @@ export default function Carousel(props) {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={`src/images/${props.project-name}image1.jpg`} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={`src/images/${props.projectNameForImage}image1.jpg`} class="d-block w-100" alt="..." />
+            {/* <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
-            </div>
+            </div> */}
           </div>
           <div class="carousel-item">
-            <img src={`src/images/${props.project-name}image2.jpg`} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={`src/images/${props.projectNameForImage}image2.jpg`} class="d-block w-100" alt="..." />
+            {/* <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
-            </div>
+            </div> */}
           </div>
           <div class="carousel-item">
-            <img src={`src/images/${props.project-name}image3.jpg`} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
+            <img src={`src/images/${props.projectNameForImage}image3.jpg`} class="d-block w-100" alt="..." />
+            {/* <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
-            </div>
+            </div> */}
           </div>
         </div>
         <button

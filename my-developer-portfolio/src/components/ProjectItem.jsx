@@ -7,7 +7,7 @@ export default function ProjectItem(props) {
       <div class={`card text-center my-2 ${props.cardImageClass}`}>
         <div class="card-body">
             <div class="card-body-space">
-                <h5 class="card-title">{props.title}</h5>
+                <h5 class="card-title"><b>{props.title}</b></h5>
                 <p class="card-text mb-4">
                     {props.description}
                 </p>

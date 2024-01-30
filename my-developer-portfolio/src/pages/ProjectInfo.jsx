@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProjectInfo(props) {
 
-  const {projectTitle, projectDescription, websiteLink, githubLink, features, technologies} = props;
+  const {projectTitle, projectDescription, websiteLink, githubLink, features, technologies,projectNameForImage} = props;
 
   return (
     <>
@@ -12,12 +12,12 @@ export default function ProjectInfo(props) {
       <h1 className="text-center project-name">{projectTitle}</h1>
       <div className="row mb-4">
         <div className="col-md-6">
-          <Carousel project-name="rfc"/>
+          <Carousel projectNameForImage={projectNameForImage}/>
         </div>
         <div className="col-md-6 my-auto ">
-          <h3>Description</h3>
-          <p>{projectDescription}</p>
-          <Link className="button-class visit-website-button" to={websiteLink} target="_blank">Visit Website</Link>
+          <h3 className="ms-1">Description</h3>
+          <p className="ms-1">{projectDescription}</p>
+          <Link className="button-class visit-website-button-project-info" to={websiteLink} target="_blank">Visit Website</Link>
           <Link className="button-class see-github-button" to={githubLink} target="_blank">See on GitHub</Link>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function ProjectInfo(props) {
           <h3 className='text-center'>Main Features</h3>
           <ul className='main-feature-list'>
             {features.map(feature=>(
-            <li>{feature}</li>
+            <li><b>{feature.name}</b> {feature.description}</li>
             ))}
           </ul>
         </div>
