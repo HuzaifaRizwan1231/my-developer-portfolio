@@ -6,7 +6,6 @@ body{
   margin: 0;
 }
 
-
 /* Navbar */
 
 .navbar{
@@ -44,18 +43,24 @@ body{
 
 .mainText{
   font-weight: 700;
-  padding-left: 200px;
+  padding-left: 185px;
+  @media (max-width: 540px) {
+    padding: 0px 20px;
+  }
 }
 
 .typedJSText{
   color: #44dcec;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 
 /* Project Section */
 
 .projects-section{
   padding: 100px;
+  @media (max-width: 540px) {
+    padding: 30px;
+  }
 }
 
 /* .projects-section h1{
@@ -63,12 +68,17 @@ body{
 } */
 
 .card{
-  font-family: 'Merriweather', serif;
   border-radius: 18px;
   height: 268px;
   background-size: 100%;
   transition: background-size 0.75s;
   background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width: 540px) {
+    background-size: 175%;
+    aspect-ratio: 16/9 ;
+    width: 100%;
+  }
 }
 
 .card-body{
@@ -90,14 +100,17 @@ body{
 
 .card:hover{
   background-size: 130%;
+  @media (max-width: 540px) {
+    background-size: 205%;
+  }
 }
 
 .card-title{
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .card-text{
-  font-size: 18px;
+  font-size: 20px;
   padding: 0px 20px;
 }
 
@@ -112,6 +125,7 @@ body{
 .visit-website-button{
   color: #062338 !important;
   background-color: #44dcec !important;
+  font-size: 18px;
 }
 
 .see-more-button{

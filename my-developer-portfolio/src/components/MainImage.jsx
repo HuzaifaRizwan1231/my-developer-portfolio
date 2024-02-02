@@ -6,7 +6,7 @@ export default function MainImage() {
 
     React.useEffect(() => {
         const typed = new Typed(el.current, {
-        strings: ['<i>Web Developer</i>', '<i>Software Engineer</i>'],
+        strings: ['<i>Web Developer</i>', '<i>Software Engineer</i>','<i>Programmer</i>'],
         typeSpeed: 50,
         loop:true
         });
@@ -18,9 +18,13 @@ export default function MainImage() {
     }, []);
   return (
     <>
-    <div className="mainSection">
-    <h1 className="mainText">Hi! This is Huzaifa Rizwan
-    <p className="typedJSText"><span ref={el}></span></p>
+    <div className="mainSection container-fluid">
+    <h1 className="mainText">
+      <div className="row">
+        <div className="col-md-5 text-center "> Hi! This is Huzaifa Rizwan
+        <p className="typedJSText"><span ref={el}></span></p></div>
+      </div>
+     
     </h1>
     </div>
     </>
