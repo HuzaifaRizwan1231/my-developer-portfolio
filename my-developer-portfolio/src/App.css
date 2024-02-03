@@ -64,12 +64,18 @@ body{
 /* Main Image */
 
 .mainSection{
-  background-color: aqua !important;
+  background-color:#062338;
   background-image: url("./images/back.png");
   color: white;
   background-size: cover;
   padding-top: 45vh;
   padding-bottom: 45vh;
+  @media (max-width: 540px) {
+    background-size: 450%;
+    background-position-x: 55%;
+    background-position-y: 10%;
+    padding: 45vh 1vh;
+  }
 }
 
 
