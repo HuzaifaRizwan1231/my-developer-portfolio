@@ -21,7 +21,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon text-light"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto my-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   My Work
@@ -37,25 +37,28 @@ export default function Navbar() {
                   Resume
                 </a>
               </li>
+            
+                <li className="nav-item">
+                  <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Github</span>
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
-                <i class="fa-brands fa-github"></i>
-                
-                </Link>
-              </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className="nav-link" to="https://www.instagram.com/huzaifa_rizwan1231/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-                </Link>
-              </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="https://www.instagram.com/huzaifa_rizwan1231/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                  </Link>
+                </li>
+              
               {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"

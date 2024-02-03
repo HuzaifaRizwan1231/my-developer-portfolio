@@ -12,6 +12,10 @@ body{
   background-color: #062338;
   justify-content: space-between;
   height: 70px;
+  @media (max-width: 540px) {
+    display: flex;
+    padding: 14px 0px;
+  }
 }
 
 .navbar-brand, .nav-link{
@@ -23,10 +27,38 @@ body{
   font-size: 25px;
 }
 
+.nav-item span{
+  margin-left: 5px;
+  display: none;
+  @media (max-width: 540px) {
+    display: inline;
+  }
+}
+
 .nav-link{
   margin-right: 20px;
   font-size: 18px;
+  @media (max-width: 540px) {
+    border-radius: 20px;
+    margin: 6px auto;
+    width: 80%;
+    background-color: #44dcec;
+    color: #062338 !important;
+  }
 }
+
+.navbar-collapse{
+  @media (max-width: 540px) {
+    margin-top: 8px;
+    text-align: center;
+    border: 1px solid #44dcec;
+    border-radius: 20px;
+    background-color: #062338;
+  }
+}
+
+
+
 
 
 /* Main Image */
@@ -145,28 +177,44 @@ body{
   text-align: center;
   background-color: #062338;
   padding: 60px 40px;
+  @media (max-width: 540px) {
+    padding: 60px 20px;
+  }
 }
 
 .footer-container{
   border-radius: 40px;
   padding: 60px;
   background-color: #44dcec;
+  @media (max-width: 540px) {
+    padding: 60px 40px;
+  }
 }
 
 .footer-email{
   font-size: 18px;
   color: #470e88;
   text-decoration: none;
+   @media (max-width: 540px) {
+   font-size: 16px;
+  }
 }
 
 .footer-links{
+  text-align: center;
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.footer-links .nav-link{
+.footer-links .footer-link{
   font-size: 22px;
+}
+
+.footer-link{
+  @media (max-width: 540px) {
+    color: white;
+  }
 }
 
 
