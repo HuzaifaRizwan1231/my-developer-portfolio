@@ -108,7 +108,7 @@ body{
 .card{
   border-radius: 18px;
   height: 268px;
-  background-size: 100%;
+  background-size: 110%;
   transition: background-size 0.75s;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,7 +137,7 @@ body{
 }
 
 .card:hover{
-  background-size: 130%;
+  background-size: 140%;
   @media (max-width: 540px) {
     background-size: 205%;
   }
@@ -218,9 +218,7 @@ body{
 }
 
 .footer-link{
-  @media (max-width: 540px) {
-    color: white;
-  }
+  color: white;
 }
 
 
@@ -285,4 +283,11 @@ body{
 .tech-used-list li{
   margin: 0px 10px;
   font-size: 20px;
+}
+
+
+/* About Page */
+.about-section{
+  margin-top: 70px;
+  padding: 100px 50px;
 }

@@ -9,7 +9,7 @@ export default function Footer() {
             <h1>Come Say Hello!</h1>
             <a href="mailto:huzaifa.rizwan1231@gmail.com" className="footer-email"><i class="fa-regular mx-2 fa-envelope"></i>huzaifa.rizwan1231@gmail.com</a>
             </div>
-        <div className="footer-links gap-md-4 gap-5">
+        <div className="footer-links gap-5">
 
         <Link className="footer-link" to="https://www.facebook.com/huzaifa.rizwan.7359" target="_blank">
         <i class="fa-brands fa-facebook"></i>
