@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function About() {
+
+  const [scrollToTop, setscrollToTop] = useState();
+  useEffect(() => {
+    setscrollToTop(window.scrollTo(0,0));
+  }, [])
+  
   return (
     <>
       <div className="about-section container">
         <div className="row ">
-          <div className="col-md-6">
-            <img src="src/images/Picture.jpg" alt="" className="w-100 " />
+          <div className="col-md-12 d-flex">
+            <img src="src/images/124560775.jpeg" alt="" className="w-100 about-image" />
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-12 mt-4">
             <h2>
               <b>A Bit About Me</b>
             </h2>
@@ -32,24 +38,22 @@ export default function About() {
               Apr 2008 - Mar 2020 <br />
               Grade: 1065/1100 A+ <br />
             </p>
-            
-          </div>
-          <div className="col-md-6">
-          <h2>
+            <h2>
               <b>My Skills</b>
             </h2>
-              <ul className="d-flex list-unstyled">
+              <ul className="d-flex list-unstyled skill-list">
                 <li>C++</li>
                 <li>SQL</li>
+                <li>REACT</li>
+                <li>MONGO</li>
+                <li>PHP</li>
+                <li>EXPRESS</li>
+                <li>NODE</li>
               </ul>
-           
-            <h2>
-              <b>My Hobbies</b>
-            </h2>
+
+            
           </div>
-          <div className="col-md-6">
-            <img src="src/images/Picture.jpg" alt="" className="w-100 " />
-          </div>
+         
         </div>
       </div>
     </>

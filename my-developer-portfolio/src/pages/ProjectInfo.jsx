@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from '../components/Carousel'
 import { Link } from 'react-router-dom';
 
 export default function ProjectInfo(props) {
+  const [scrollToTop, setscrollToTop] = useState();
+  useEffect(() => {
+    setscrollToTop(window.scrollTo(0,0));
+  }, [])
+
+  
 
   const {projectTitle, projectDescription, websiteLink, githubLink, features, technologies,projectNameForImage} = props;
 

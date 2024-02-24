@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const [scrollToTop, setscrollToTop] = useState();
+  const handleScroll = ()=>{
+    setscrollToTop(window.scrollTo(0,0));
+  }
+
+  
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg">
@@ -23,17 +29,17 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto my-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/" onClick={handleScroll}>
                   My Work
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" onClick={handleScroll}>
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="../resume/HuzaifaRizwan_Resume.pdf" download>
                   Resume
                 </a>
               </li>

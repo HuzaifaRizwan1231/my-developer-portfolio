@@ -291,3 +291,18 @@ body{
   margin-top: 70px;
   padding: 100px 50px;
 }
+
+.skill-list li{
+  background-color: rgb(184, 183, 183);
+  margin: 0px 10px 0px 0px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.about-image{
+  margin: auto;
+  object-fit: contain;
+  width: 400px;
+  height: 400px;
+  
+}
