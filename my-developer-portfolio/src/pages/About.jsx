@@ -14,7 +14,7 @@ export default function About() {
           <div className="col-md-12 d-flex">
             <img src="src/images/124560775.jpeg" alt="" className="w-100 about-image" />
           </div>
-          <div className="col-md-12 mt-4">
+          <div className="col-md-12 mt-4 aboutDesc">
             <h2>
               <b>A Bit About Me</b>
             </h2>
@@ -41,7 +41,7 @@ export default function About() {
             <h2>
               <b>My Skills</b>
             </h2>
-              <ul className="d-flex list-unstyled skill-list">
+              <ul className="d-flex list-unstyled skill-list flex-wrap ">
                 <li>C++</li>
                 <li>SQL</li>
                 <li>REACT</li>

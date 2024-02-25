@@ -12,7 +12,7 @@ export default function Navbar() {
     <>
       <nav className="navbar fixed-top navbar-expand-lg">
         <div className="container-fluid">
-          <Link className="navbar-brand"  to="/">
+          <Link className="navbar-brand"  to="/" onClick={handleScroll}>
             Huzaifa's Portfolio
           </Link>
           <button

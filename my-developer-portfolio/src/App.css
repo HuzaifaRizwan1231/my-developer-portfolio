@@ -101,6 +101,30 @@ body{
   }
 }
 
+
+
+.projectItemOnMobile .card{
+  @media (max-width: 540px) {
+    height: 90% !important;
+    width: 100%;
+  }
+}
+
+.projectItemOnMobile .card .card-body .card-body-space {
+  @media (max-width: 540px) {
+    padding: 0;
+    height: 60% !important;
+    scale: 0.6;
+  }
+  @media (max-width: 330px) {
+    scale: 0.5;
+    width: 110%;
+    margin: 0px -10px;
+  }
+}
+
+
+
 /* .projects-section h1{
   padding-bottom: 10px;
 } */
@@ -113,7 +137,6 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   @media (max-width: 540px) {
-    background-size: 175%;
     aspect-ratio: 16/9 ;
     width: 100%;
   }
@@ -138,9 +161,9 @@ body{
 
 .card:hover{
   background-size: 140%;
-  @media (max-width: 540px) {
+  /* @media (max-width: 540px) {
     background-size: 205%;
-  }
+  } */
 }
 
 .card-title{
@@ -157,6 +180,7 @@ body{
   padding: 10px 20px;
   margin: 0px 5px;
   text-decoration: none;
+  
 }
 
 
@@ -164,6 +188,7 @@ body{
   color: #062338 !important;
   background-color: #44dcec !important;
   font-size: 18px;
+  
 }
 
 .see-more-button{
@@ -246,9 +271,15 @@ body{
   font-weight: 700;
 }
 
+.projectInfoCarousel{
+  /* padding: 100px; */
+}
+
+
 .project-info-image{
   width: 100%;
   border-radius: 20px;
+  
 }
 
 .visit-website-button-project-info{
@@ -257,17 +288,33 @@ body{
   border: 1px solid #062338;
   background-color: #062338;
   color: white;
+  @media (max-width: 540px) {
+    display: flex;
+    margin: 10px 0px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .see-github-button{
   border: 1px solid #062338;
   background-color: white;
   color: #062338;
+  @media (max-width: 540px) {
+    display: flex;
+    margin: 10px 0px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .main-feature-list{
   padding: 0px 200px;
   list-style: decimal;
+  @media (max-width: 540px) {
+    padding: 0;
+  }
 }
 
 .main-feature-list li{
@@ -278,11 +325,20 @@ body{
 .tech-used-list{
   padding-top: 20px;
   list-style: none;
+  @media (max-width: 540px) {
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+  }
 }
 
 .tech-used-list li{
   margin: 0px 10px;
   font-size: 20px;
+  @media (max-width: 540px) {
+    margin: 0;
+    margin-top: 10px;
+  }
 }
 
 
@@ -290,11 +346,14 @@ body{
 .about-section{
   margin-top: 70px;
   padding: 100px 50px;
+  @media (max-width: 540px) {
+    padding: 0px 50px 50px 50px;
+   }
 }
 
 .skill-list li{
   background-color: rgb(184, 183, 183);
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 10px 0px;
   padding: 8px 16px;
   border-radius: 8px;
 }
@@ -305,4 +364,10 @@ body{
   width: 400px;
   height: 400px;
   
+}
+
+.aboutDesc{
+  @media (max-width: 540px) {
+    margin-top: 0px !important;
+   }
 }

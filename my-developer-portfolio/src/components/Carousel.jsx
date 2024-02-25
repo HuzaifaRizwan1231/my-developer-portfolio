@@ -3,7 +3,7 @@ import React from "react";
 export default function Carousel(props) {
   return (
     <>
-      <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-dark " data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
             type="button"
@@ -28,19 +28,19 @@ export default function Carousel(props) {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={`src/images/${props.projectNameForImage}image1.jpg`} class="d-block w-100" alt="..." />
+            <img src={`src/images/${props.projectNameForImage}image1.jpg`} class="d-block w-100 object-fit-contain " alt="..." />
             {/* <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
             </div> */}
           </div>
           <div class="carousel-item">
-            <img src={`src/images/${props.projectNameForImage}image2.jpg`} class="d-block w-100" alt="..." />
+            <img src={`src/images/${props.projectNameForImage}image2.jpg`} class="d-block w-100 object-fit-contain" alt="..." />
             {/* <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
             </div> */}
           </div>
           <div class="carousel-item">
-            <img src={`src/images/${props.projectNameForImage}image3.jpg`} class="d-block w-100" alt="..." />
+            <img src={`src/images/${props.projectNameForImage}image3.jpg`} class="d-block w-100 object-fit-contain" alt="..." />
             {/* <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
             </div> */}

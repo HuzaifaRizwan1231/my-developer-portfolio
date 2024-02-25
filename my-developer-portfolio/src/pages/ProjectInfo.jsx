@@ -17,10 +17,10 @@ export default function ProjectInfo(props) {
     <div className="container project-info-container">
       <h1 className="text-center project-name">{projectTitle}</h1>
       <div className="row mb-4">
-        <div className="col-md-6">
+        <div className="col-md-6  projectInfoCarousel">
           <Carousel projectNameForImage={projectNameForImage}/>
         </div>
-        <div className="col-md-6 my-auto ">
+        <div className="col-md-6 my-auto col-12 projectInfoDesc">
           <h3 className="ms-1">Description</h3>
           <p className="ms-1">{projectDescription}</p>
           <Link className="button-class visit-website-button-project-info" to={websiteLink} target="_blank">Visit Website</Link>
