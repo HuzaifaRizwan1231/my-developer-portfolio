@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -7,33 +7,61 @@ export default function Navbar() {
     setscrollToTop(window.scrollTo(0,0));
   }
 
+  const handleLinkClick = ()=>{
+    handleScroll();
+    toggleNav();
+  }
+  const [isNavOpen, setNavOpen] = useState(false);
+  const NavBarRef = useRef(null);
+
+  useEffect(() => {
+      //handling outside click
+    const handleClickOutside = (event) => {
+      if (NavBarRef.current && !NavBarRef.current.contains(event.target)) {
+        const exceptionButton = document.querySelector(".exception-button");
+        if (exceptionButton && exceptionButton.contains(event.target)) {
+          return;
+        }
+        setNavOpen(false);
+      }
+    };
+    // Add the click event listener to the document
+    document.addEventListener("click", handleClickOutside);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isNavOpen, NavBarRef]);
+
+  const toggleNav = () => {
+    setNavOpen(!isNavOpen);
+  };
+
   
   return (
     <>
       <nav className="navbar shadow fixed-top navbar-expand-lg">
         <div className="container-fluid">
-          <Link className="navbar-brand"  to="/" onClick={handleScroll}>
+          <Link className="navbar-brand"  to="/" onClick={handleLinkClick}>
             Huzaifa's Portfolio
           </Link>
           <button
-            className="navbar-toggler text-light"
+            onClick={toggleNav}
+            id="side-btn"
+            className="navbar-toggler text-light exception-button"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon text-light"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div ref={NavBarRef} className={`navbar-collapse shadow ${isNavOpen ? "shows":"collapsings"}`}>
             <ul className="navbar-nav ms-auto my-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/" onClick={handleScroll}>
-                  My Work
+                <Link className="nav-link active" aria-current="page" to="/" onClick={handleLinkClick}>
+                  Home
                 </Link>
               </li>
-              <li className="nav-item" onClick={handleScroll}>
+              <li className="nav-item" onClick={handleLinkClick}>
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
