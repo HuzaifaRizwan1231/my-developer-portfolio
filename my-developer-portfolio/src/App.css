@@ -301,19 +301,31 @@ body{
 .project-info-container{
   margin-top: 70px;
   padding: 60px;
+  @media (max-width: 540px) {
+    padding: 30px;
+  }
 }
 
 .project-name{
   padding-bottom: 30px;
 }
 
+.carousel{
+  @media (max-width: 540px) {
+    margin-bottom: 20px;
+  }
+}
 .carousel-inner{
   border-radius: 18px;
   height: 268px;
+  @media (max-width: 540px) {
+    height: 173px;
+  }
 }
 
 .carousel-item, .carousel-item img{
   height: 100%;
+  object-fit: cover;
 }
 
 .project-info-container h3{
@@ -355,6 +367,12 @@ body{
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+}
+
+.project-features{
+  @media (max-width: 540px) {
+    padding: 0px 30px;
   }
 }
 

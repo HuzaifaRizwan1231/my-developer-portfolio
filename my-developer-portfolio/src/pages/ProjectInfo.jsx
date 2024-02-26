@@ -17,7 +17,7 @@ export default function ProjectInfo(props) {
     <div className="container project-info-container">
       <h1 className="text-center project-name">{projectTitle}</h1>
       <div className="row mb-4">
-        <div className="col-md-6  projectInfoCarousel">
+        <div className="col-md-6 col-12 ">
           <Carousel projectNameForImage={projectNameForImage}/>
         </div>
         <div className="col-md-6 my-auto col-12 projectInfoDesc">
@@ -28,8 +28,8 @@ export default function ProjectInfo(props) {
         </div>
       </div>
       
-      <div className="row">
-        <div className="col-md-12">
+      <div className="row ">
+        <div className="col-md-12 project-features">
           <h3 className='text-center'>Main Features</h3>
           <ul className='main-feature-list'>
             {features.map(feature=>(
@@ -37,7 +37,7 @@ export default function ProjectInfo(props) {
             ))}
           </ul>
         </div>
-        <div className="col-md-12">
+        <div className="col-md-12 ">
           <h3 className='text-center'>Technologies Used</h3>
           <ul className='d-flex justify-content-center tech-used-list'>
             {technologies.map(technology=>(
