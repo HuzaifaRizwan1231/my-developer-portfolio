@@ -65,7 +65,7 @@ body{
 
 .mainSection{
   background-color:#062338;
-  background-image: url("./images/back.png");
+  background-image: url("public/images/back.png");
   color: white;
   background-size: cover;
   padding-top: 45vh;
@@ -199,7 +199,7 @@ body{
 
 /* Add project Item image class here */
 .rfc-img{
-  background-image: url(./images/rfcimage1.jpg);
+  background-image: url(public/images/rfcimage1.jpg);
 }
 
 /* Footer Section */
