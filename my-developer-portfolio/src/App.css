@@ -87,6 +87,10 @@ body{
   color: white;
   border: none;
   font-size: 25px !important;
+  padding: 8px 20px !important;
+  @media (min-width: 540px) {
+    display: none ;
+  }
 }
 
 .exception-button:active{
