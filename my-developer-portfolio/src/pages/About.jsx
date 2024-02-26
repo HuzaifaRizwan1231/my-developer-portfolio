@@ -12,7 +12,7 @@ export default function About() {
       <div className="about-section container">
         <div className="row ">
           <div className="col-md-12 d-flex">
-            <img src="public/images/124560775.jpeg" alt="" className="w-100 about-image" />
+            <img src="/assets/124560775.jpeg" alt="" className="w-100 about-image" />
           </div>
           <div className="col-md-12 mt-4 aboutDesc">
             <h2>
