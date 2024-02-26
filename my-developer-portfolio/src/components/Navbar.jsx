@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import ResumePDF from '/assets/HuzaifaRizwan_Resume.pdf';
 
 export default function Navbar() {
   const [scrollToTop, setscrollToTop] = useState();
@@ -67,7 +68,8 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="../resume/HuzaifaRizwan_Resume.pdf" download>
+                <a className="nav-link" href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
+                rel="noreferrer">
                   Resume
                 </a>
               </li>
