@@ -14,7 +14,7 @@ export default function ProjectItem(props) {
                 <Link to={props.websiteLink} target="_blank" class="button-class visit-website-button">
                     Visit Website
                 </Link>
-                <Link to={props.seeMoreLink} class="button-class see-more-button">
+                <Link to={props.seeMoreLink} class="button-class see-more-button" >
                     See More
                 </Link>
             </div>

@@ -10,7 +10,7 @@ export default function Navbar() {
   
   return (
     <>
-      <nav className="navbar fixed-top navbar-expand-lg">
+      <nav className="navbar shadow fixed-top navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand"  to="/" onClick={handleScroll}>
             Huzaifa's Portfolio

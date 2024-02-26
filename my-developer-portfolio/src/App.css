@@ -118,8 +118,8 @@ body{
   }
   @media (max-width: 330px) {
     scale: 0.5;
-    width: 110%;
-    margin: 0px -10px;
+    width: 120%;
+    margin: 0px -22px;
   }
 }
 
