@@ -41,7 +41,7 @@ export default function Navbar() {
   
   return (
     <>
-      <nav className="navbar shadow fixed-top navbar-expand-lg">
+      <nav className="navbar shadow fixed-top navbar-expand-lg ">
         <div className="container-fluid">
           <Link className="navbar-brand"  to="/" onClick={handleLinkClick}>
             Huzaifa's Portfolio
@@ -49,12 +49,12 @@ export default function Navbar() {
           <button
             onClick={toggleNav}
             id="side-btn"
-            className="navbar-toggler text-light exception-button"
-            type="button"
+            className="button-class exception-button mx-2"
           >
-            <span className="navbar-toggler-icon text-light"></span>
+            {isNavOpen ? <i class="fa-solid fa-xmark fa-xl"></i>: <i class="fa-solid fa-bars fa-lg"></i>}
+            
           </button>
-          <div ref={NavBarRef} className={`navbar-collapse shadow ${isNavOpen ? "shows":"collapsings"}`}>
+          <div ref={NavBarRef} className={`navbar-collapse ${isNavOpen ? "shows":"collapsings"}`}>
             <ul className="navbar-nav ms-auto my-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/" onClick={handleLinkClick}>
