@@ -29,8 +29,8 @@ export default function ProjectInfo(props) {
       </div>
       
       <div className="row ">
+          <h3 className='feature-tech-align ms-1'>Main Features</h3>
         <div className="col-md-12 project-features">
-          <h3 className='text-center'>Main Features</h3>
           <ul className='main-feature-list'>
             {features.map(feature=>(
             <li><b>{feature.name}</b> {feature.description}</li>
@@ -38,7 +38,7 @@ export default function ProjectInfo(props) {
           </ul>
         </div>
         <div className="col-md-12 ">
-          <h3 className='text-center'>Technologies Used</h3>
+          <h3 className='feature-tech-align ms-1'>Technologies Used</h3>
           <ul className='d-flex justify-content-center tech-used-list'>
             {technologies.map(technology=>(
                <li> <i class={`${technology.icon} mx-2`}></i>{technology.name}</li>

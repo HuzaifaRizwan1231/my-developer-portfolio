@@ -376,6 +376,15 @@ body{
   }
 }
 
+.feature-tech-align{
+  text-align: center;
+  @media (max-width: 540px) {
+    text-align: start;
+  }
+}
+
+
+
 .main-feature-list{
   padding: 0px 200px;
   list-style: decimal;
