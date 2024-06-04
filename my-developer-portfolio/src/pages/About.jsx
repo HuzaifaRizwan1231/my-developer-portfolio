@@ -1,54 +1,48 @@
 import React, { useEffect, useState } from "react";
 
-export default function About() {
+export default function About(props) {
 
-  const [scrollToTop, setscrollToTop] = useState();
-  useEffect(() => {
-    setscrollToTop(window.scrollTo(0,0));
-  }, [])
+  const {aboutRef} = props;
   
   return (
     <>
-      <div className="about-section container">
+      <div ref={aboutRef} className="about-section container">
         <div className="row ">
-          <div className="col-md-12 d-flex">
+          {/* <div className="col-md-12 d-flex">
             <img src="/assets/124560775.jpeg" alt="" className="w-100 about-image" />
-          </div>
-          <div className="col-md-12 mt-4 aboutDesc">
+          </div> */}
+          <div className="col-md-10 aboutDesc">
             <h2>
-              <b>A Bit About Me</b>
+              <b>ABOUT ME</b>
             </h2>
-            <p>
-             I am an undergraduate student currently studying Software Engineering. Exporing different fields of tech, eager to learn, I am confident that with hardwork and dedication, I can earn great success. I live in Lahore, Pakistan which is a country full of diversity, beauty, and with a need of technological advancement. Let's play a part in that together! I also love cats :) 
+            <p className="m-0">
+             I am an undergraduate student currently studying <span>Software Engineering</span> at <span>FAST NUCES</span> Lahore. Exploring different fields of tech, eager to learn, I am confident that with hardwork and dedication, I can earn great success. I have great experience in Web Development with expertise in <span>REACT</span>, <span>EXPRESS</span> and <span>NODE</span>. I have developed full stack applications in <span>MERN</span>, <span>PHP</span> and <span>Java Spring Boot</span>. My interests also include AI/ML and Game development.
             </p>
             
+            
+          </div>
+          <div className="col-md-10 techStack">
+           
             <h2>
-              <b>My Education</b>
+              <b>TECH STACK</b>
             </h2>
-            <p>
-              <h5>National University of Computer and Emerging Sciences</h5> 
-              Bachelor's degree, Computer Software Engineering <br />
-              Aug 2022 - 2026 <br /> <hr />
-              <h5>Punjab College of Science, Muslim Town, Lahore</h5> 
-              FSC (Pre-Engineering) <br />
-              Oct 2020 - Jul 2022  <br />
-              Grade: 1047/1100 A+ <br /> <hr />
-              <h5>Divisional Public School, Model Town, Lahore</h5> 
-              Matric (Computer Science) <br />
-              Apr 2008 - Mar 2020 <br />
-              Grade: 1065/1100 A+ <br />
-            </p>
-            <h2>
-              <b>My Skills</b>
-            </h2>
-              <ul className="d-flex list-unstyled skill-list flex-wrap ">
-                <li>C++</li>
-                <li>SQL</li>
-                <li>REACT</li>
-                <li>MONGO</li>
-                <li>PHP</li>
-                <li>EXPRESS</li>
-                <li>NODE</li>
+              <ul className="d-flex list-unstyled skill-list flex-wrap gap-4">
+                <li className="shadow-lg"><img src="assets/techStack/c++.png" alt=""  className="w-100"/></li>
+                <li className="shadow-lg"><img src="assets/techStack/mysql.png" alt=""  className="w-100"/></li>
+                <li className="shadow-lg"><img src="assets/techStack/sql-server.png" alt=""  className="w-100"/></li>
+                <li className="shadow-lg"><img src="assets/techStack/react.png" alt=""  className="w-100"/></li>
+                <li className="shadow-lg"><img src="assets/techStack/mongodb.png" alt=""  className="w-100"/></li>
+                <li className="shadow-lg"><img src="assets/techStack/php.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/expressjs.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/nodejs.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/tailwindcss.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/java.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/spring-boot.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/thymeleaf.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/python.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/html.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/css.png" alt=""  className="w-100"/></li>
+                 <li className="shadow-lg"><img src="assets/techStack/javascript.png" alt=""  className="w-100"/></li>
               </ul>
 
             

@@ -1,22 +1,21 @@
-import React from 'react'
-import ProjectItem from './ProjectItem'
+import React from "react";
+import { Link } from "react-router-dom";
+import RFC from "../projects/RFC";
+import ShaheenSuperStore from "../projects/ShaheenSuperStore";
 
-export default function Projects() {
+export default function Projects(props) {
+
+  const {projectsRef} = props;
   return (
     <>
-        <div className="projects-section container">
-            <h1 className='text-center'>My Work</h1>
-            <div className="row">
-                <div className="col-md-6 col-12 projectItemOnMobile">
-                    <ProjectItem cardImageClass="rfc-img" title="RFC" description="A Delightful Restaurant Menu App that Offers a Variety of Food Options" websiteLink="https://restaurant-menu-app-frontend.vercel.app/" seeMoreLink="/restaurantMenuApp"/>
-                </div>
-                
-
-               {/* Add Project here with all info */}
-                
-            </div>
-
+      <div ref={projectsRef} className="projects-section container-fluid">
+        <h2 className="text-center">PROJECTS</h2>
+        <div className="row gap-4">
+          
+          <RFC/>
+          <ShaheenSuperStore/>
         </div>
+      </div>
     </>
-  )
+  );
 }

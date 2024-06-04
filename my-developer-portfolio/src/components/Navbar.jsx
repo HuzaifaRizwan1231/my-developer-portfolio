@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ResumePDF from '/assets/HuzaifaRizwan_Resume.pdf';
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+  const {AboutLinkClick, ProjectsLinkClick, ContactLinkClick} = props;
+
   const [scrollToTop, setscrollToTop] = useState();
   const handleScroll = ()=>{
     setscrollToTop(window.scrollTo(0,0));
@@ -12,6 +15,23 @@ export default function Navbar() {
     handleScroll();
     toggleNav();
   }
+
+  const AboutClick = ()=>{
+    AboutLinkClick();
+    toggleNav();
+  }
+
+  const ProjectsClick = ()=>{
+    ProjectsLinkClick();
+    toggleNav();
+  }
+
+  const ContactClick = ()=>{
+    ContactLinkClick();
+    toggleNav();
+  }
+
+
   const [isNavOpen, setNavOpen] = useState(false);
   const NavBarRef = useRef(null);
 
@@ -42,10 +62,10 @@ export default function Navbar() {
   
   return (
     <>
-      <nav className="navbar shadow fixed-top navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <Link className="navbar-brand"  to="/" onClick={handleLinkClick}>
-            Huzaifa's Portfolio
+            Huzaifa Rizwan
           </Link>
           <button
             onClick={toggleNav}
@@ -62,17 +82,27 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item" onClick={handleLinkClick}>
-                <Link className="nav-link" to="/about">
+              <li className="nav-item" onClick={AboutClick}>
+                <Link className="nav-link" >
                   About
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" onClick={ProjectsClick}>
+                <Link className="nav-link">
+                  Projects
+                </Link>
+              </li>
+              <li className="nav-item" onClick={ContactClick}>
+                <Link className="nav-link">
+                  Contact
+                </Link>
+              </li>
+              {/* <li className="nav-item">
                 <a className="nav-link" href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
                 rel="noreferrer">
                   Resume
                 </a>
-              </li>
+              </li> */}
             
                 <li className="nav-item">
                   <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
@@ -94,38 +124,6 @@ export default function Navbar() {
                   <span>Instagram</span>
                   </Link>
                 </li>
-              
-              {/* <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li> */}
               
             </ul>
           </div>

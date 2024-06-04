@@ -9,7 +9,7 @@ body{
 /* Navbar */
 
 .navbar{
-  background-color: #062338;
+  background-color: #aad576;
   justify-content: space-between;
   height: 70px;
   @media (max-width: 540px) {
@@ -19,12 +19,12 @@ body{
 }
 
 .navbar-brand, .nav-link{
-  color: white !important;
+  color: #245501 !important;
 }
 
 .navbar-brand{
   padding-left: 14px !important;
-  font-size: 25px;
+  font-size: 29px;
 }
 
 .nav-item span{
@@ -37,7 +37,7 @@ body{
 
 .nav-link{
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 20px;
   @media (max-width: 540px) {
     border-radius: 20px;
     margin: 6px auto;
@@ -54,6 +54,7 @@ body{
 }
 
 .navbar-collapse{
+  height: 100%;
   @media (max-width: 540px) {
     width: 70vw;
     margin-top: 70px;
@@ -113,12 +114,12 @@ body{
 /* Main Image */
 
 .mainSection{
-  background-color:#062338;
-  background-image: url(/assets/back.png);
-  color: white;
+  margin-top: -40px;
+  background-color:#aad576;
+  height: 100vh;
+  /* background-image: url(/assets/back.png); */
+  color: black;
   background-size: cover;
-  padding-top: 45vh;
-  padding-bottom: 45vh;
   @media (max-width: 540px) {
     background-size: 450%;
     background-position-x: 55%;
@@ -129,27 +130,52 @@ body{
 
 
 .mainText{
+  
+  font-size: 60px !important;
   font-weight: 700;
-  padding-left: 185px;
   @media (max-width: 540px) {
     padding: 0px 20px;
   }
 }
 
 .typedJSText{
-  color: #44dcec;
+  color: #143601;
   /* padding-left: 50px; */
+}
+
+.buttons button{
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.view-projcts-btn{
+  background-color: #1a4301;
+  color: white;
+}
+
+.get-connected-btn{
+  background-color: transparent;
+  color: #1a4301;
+  border: 1px solid #1a4301 !important;
 }
 
 /* Project Section */
 
 .projects-section{
-  padding: 100px;
+  background-color: #aad576;
+  padding: 55px;
   @media (max-width: 540px) {
     padding: 30px;
   }
 }
 
+
+.projects-section h2{
+  font-weight: 700;
+  color: #245501;
+}
 
 
 .projectItemOnMobile .card{
@@ -178,9 +204,13 @@ body{
   padding-bottom: 10px;
 } */
 
-.card{
+.card-image{
   border-radius: 18px;
-  height: 268px;
+}
+
+.card{
+  padding: 20px;
+  border-radius: 18px;
   background-size: 110%;
   transition: background-size 0.75s;
   background-position: center;
@@ -193,11 +223,11 @@ body{
 
 .card-body{
   border-radius: 18px;
-  background-color: #062338;
+  background-color: #fff;
   color: white;
   height: 100%;
-  opacity: 0;
-  transition: opacity 0.75s;
+  /* opacity: 0; */
+  /* transition: opacity 0.75s; */
 }
 
 .card-body-space{
@@ -205,11 +235,11 @@ body{
 }
 
 .card:hover .card-body{
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .card:hover{
-  background-size: 140%;
+  /* background-size: 140%; */
   /* @media (max-width: 540px) {
     background-size: 205%;
   } */
@@ -217,6 +247,8 @@ body{
 
 .card-title{
   font-size: 28px;
+  font-weight: 700;
+  color: #245501;
 }
 
 .card-text{
@@ -230,6 +262,15 @@ body{
   margin: 0px 5px;
   text-decoration: none;
   
+}
+
+.card-links{
+  font-size: 24px;
+}
+
+.card-links a{
+  color: black;
+  text-decoration: none;
 }
 
 
@@ -247,25 +288,29 @@ body{
 }
 
 /* Add project Item image class here */
-.rfc-img{
+/* .rfc-img{
   background-image: url(/assets/rfcimage1.jpg);
-}
+} */
 
 /* Footer Section */
 
 .footer-section{
   text-align: center;
-  background-color: #062338;
-  padding: 60px 40px;
+  background-color: #fff;
+  padding: 55px;
   @media (max-width: 540px) {
     padding: 60px 20px;
   }
 }
 
+.footer-section h2{
+  font-weight: 700;
+  color: #245501;
+}
+
 .footer-container{
   border-radius: 40px;
   padding: 60px;
-  background-color: #44dcec;
   @media (max-width: 540px) {
     padding: 60px 40px;
   }
@@ -273,7 +318,7 @@ body{
 
 .footer-email{
   font-size: 18px;
-  color: #470e88;
+  color: black;
   text-decoration: none;
    @media (max-width: 540px) {
    font-size: 16px;
@@ -284,7 +329,6 @@ body{
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 }
 
 .footer-links .footer-link{
@@ -292,7 +336,14 @@ body{
 }
 
 .footer-link{
-  color: white;
+  color: #245501;
+}
+
+.link-icon{
+  background-color: #f3f3f6;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -420,18 +471,32 @@ body{
 
 /* About Page */
 .about-section{
-  margin-top: 70px;
-  padding: 100px 50px;
+  padding: 55px;
   @media (max-width: 540px) {
     padding: 0px 50px 50px 50px;
    }
 }
 
 .skill-list li{
-  background-color: rgb(184, 183, 183);
-  margin: 0px 10px 10px 0px;
-  padding: 8px 16px;
-  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 75px;
+}
+
+.tech-list li{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
 }
 
 .about-image{
@@ -442,8 +507,24 @@ body{
   
 }
 
+.techStack{
+  padding-top: 55px;
+}
+
 .aboutDesc{
   @media (max-width: 540px) {
     margin-top: 0px !important;
    }
+}
+
+.aboutDesc h2, .techStack h2{
+  color: #245501;
+}
+
+.aboutDesc p{
+  font-size: 28px;
+}
+
+.aboutDesc p span{
+  color: #aad576;
 }
