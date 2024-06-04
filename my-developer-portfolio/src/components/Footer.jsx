@@ -9,8 +9,8 @@ export default function Footer(props) {
       <div ref={contactRef} className="footer-section">
         <h2 className="mb-4">COME SAY HELLO!</h2>
 
-        <div className="d-flex gap-4 justify-content-center">
-        <div className="d-flex justify-content-center gap-2">
+        <div className="d-flex footer-contact gap-4 justify-content-center">
+        <div className="d-flex gap-2">
           <div className="d-flex justify-content-center align-items-center link-icon">
             <i class="fa-brands w-100 fa-whatsapp  "></i>
           </div>
@@ -21,7 +21,7 @@ export default function Footer(props) {
           </div>
         </div>
 
-        <div className="d-flex justify-content-center gap-2">
+        <div className="d-flex  gap-2">
           <div className="d-flex justify-content-center align-items-center link-icon">
             <i class="fa-regular w-100 fa-envelope"></i>
           </div>

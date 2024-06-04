@@ -42,8 +42,8 @@ body{
     border-radius: 20px;
     margin: 6px auto;
     width: 80%;
-    background-color: #44dcec;
-    color: #062338 !important;
+    background-color: #1a4301;
+    color: #fff !important;
   }
 }
 
@@ -57,15 +57,16 @@ body{
   height: 100%;
   @media (max-width: 540px) {
     width: 70vw;
-    margin-top: 70px;
     text-align: center;
-    background-color: #062338;
+    background-color: #aad576;
     position: fixed;
     top: 0;
     left:0;
     height: 100vh;
     overflow-y: auto;
     transform:translateX(-100%);
+    box-shadow: var(--bs-box-shadow-lg) !important;
+    z-index: 100;
   }
 }
 
@@ -84,8 +85,8 @@ body{
 }
 
 .exception-button{
-  background-color: #062338 !important;
-  color: white;
+  background-color: #aad576 !important;
+  color: #1a4301;
   border: none;
   font-size: 25px !important;
   padding: 8px 10px !important;
@@ -124,17 +125,42 @@ body{
     background-size: 450%;
     background-position-x: 55%;
     background-position-y: 10%;
-    padding: 45vh 1vh;
+    text-align: center;
+    height: 100vh;
   }
 }
 
-
+.first-section{
+  @media (max-width: 540px) {
+    height: 50vh;
+  }
+}
+.second-section{
+  @media (max-width: 540px) {    
+    margin-bottom: 25px;
+  }
+}
 .mainText{
   
   font-size: 60px !important;
   font-weight: 700;
   @media (max-width: 540px) {
     padding: 0px 20px;
+    font-size: 30px !important;
+    margin: 0 auto !important;
+  }
+}
+
+.mainRow{
+  /* height: 100vh; */
+  @media (min-width: 540px) {
+   height: 100vh;
+  }
+  
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 40px;
   }
 }
 
@@ -143,11 +169,20 @@ body{
   /* padding-left: 50px; */
 }
 
+.buttons{
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
+}
+
 .buttons button{
   border: none;
   border-radius: 5px;
   font-size: 20px;
   padding: 10px 20px;
+  @media (max-width: 540px) {
+  padding: 6px 12px;
+  }
 }
 
 .view-projcts-btn{
@@ -167,7 +202,7 @@ body{
   background-color: #aad576;
   padding: 55px;
   @media (max-width: 540px) {
-    padding: 30px;
+    padding: 55px 25px;
   }
 }
 
@@ -206,6 +241,9 @@ body{
 
 .card-image{
   border-radius: 18px;
+  @media (max-width: 540px) {
+   margin-bottom: 16px;
+  }
 }
 
 .card{
@@ -253,7 +291,14 @@ body{
 
 .card-text{
   font-size: 20px;
-  padding: 0px 20px;
+  padding: 0px 14px;
+}
+
+.invert-on-mobile{
+  
+  @media (max-width: 540px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .button-class{
@@ -299,7 +344,7 @@ body{
   background-color: #fff;
   padding: 55px;
   @media (max-width: 540px) {
-    padding: 60px 20px;
+    padding: 55px 25px;
   }
 }
 
@@ -322,6 +367,16 @@ body{
   text-decoration: none;
    @media (max-width: 540px) {
    font-size: 16px;
+  }
+}
+
+.footer-contact{
+  @media (min-width: 540px) {
+    justify-content: center;
+    }
+  @media (max-width: 540px) {
+   flex-direction: column;
+   margin-left: 25px;
   }
 }
 
@@ -473,7 +528,7 @@ body{
 .about-section{
   padding: 55px;
   @media (max-width: 540px) {
-    padding: 0px 50px 50px 50px;
+    padding: 55px 25px;
    }
 }
 
@@ -488,6 +543,12 @@ body{
   width: 75px;
 }
 
+.skill-list{
+  @media (max-width: 540px) {
+    justify-content: center;
+   }
+}
+
 .tech-list li{
   background-color: #fff;
   padding: 10px;
@@ -500,11 +561,13 @@ body{
 }
 
 .about-image{
-  margin: auto;
   object-fit: contain;
-  width: 400px;
-  height: 400px;
-  
+  height: 90vh;
+  mix-blend-mode: darken;
+  @media (max-width: 540px) {
+    background-color: #aad576;
+    height: 50vh;
+   }
 }
 
 .techStack{

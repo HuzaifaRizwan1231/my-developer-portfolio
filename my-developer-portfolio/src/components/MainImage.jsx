@@ -25,25 +25,25 @@ export default function MainImage(props) {
   return (
     <>
       <div className="mainSection container-fluid">
-        <div className="row vh-100   ">
-          <div className="col-md-7 m-auto d-flex flex-column justify-content-center">
+        <div className="row mainRow">
+          <div className="col-md-7 first-section col-12 m-auto d-flex flex-column ">
             <div className="mainText m-auto">
               Hi, This is Huzaifa!
               <div className="typedJSText">
                 <span ref={el}></span>
               </div>
-              <div className="buttons d-flex gap-4 mt-4">
+              <div className="buttons d-flex gap-md-4 gap-3 mt-4">
               <button onClick={ProjectsLinkClick} className="view-projcts-btn">View Projects</button>
               <button onClick={ContactLinkClick} className="get-connected-btn">Get Connected</button>
             </div>
             </div>
             
           </div>
-          <div className="col-md-5 text-center m-auto">
+          <div className="col-md-5 second-section col-12 text-center d-flex justify-content-center align-items-end">
             <img
-              src="/assets/124560775.jpeg"
+              src="/assets/IMG-20230922-WA0014.jpg"
               alt=""
-              className="about-image m-auto"
+              className="about-image"
             />
           </div>
         </div>

@@ -8,13 +8,13 @@ export default function RFC() {
             <div class={`card text-center my-2 shadow-lg`}>
               <div className="row">
                 {/* Image */}
-                <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <a target="_blank" href="https://restaurant-menu-app-frontend.vercel.app/" className="col-md-6 d-flex flex-column align-items-center justify-content-center">
                   <img
                     src="assets/rfcimage1.jpg"
                     alt=""
                     className="w-100 card-image shadow-sm"
                   />
-                </div>
+                </a>
                 {/* Description */}
                 <div className="col-md-6">
                   <div className="card-title">Restaurant App</div>
@@ -60,10 +60,10 @@ export default function RFC() {
                     </li>
                   </ul>
                   <div className="card-links d-flex justify-content-center gap-4 mt-4">
-                    <a className="code">
+                    <a target="_blank" href="https://github.com/HuzaifaRizwan1231/RestaurantMenuApp" className="code">
                       Code <i class="fa-brands fa-github"></i>
                     </a>
-                    <a className="demo">
+                    <a target="_blank" href="https://restaurant-menu-app-frontend.vercel.app/" className="demo">
                       Live Demo <i class="fa-solid fa-link"></i>
                     </a>
                   </div>

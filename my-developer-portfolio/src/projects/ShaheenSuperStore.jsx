@@ -6,13 +6,12 @@ export default function ShaheenSuperStore() {
         {/* Shaheen Super Store Project */}
         <div className="col-md-8 m-auto col-12 projectItemOnMobile">
             <div class={`card text-center my-2 shadow-lg`}>
-              <div className="row">
+              <div className="row invert-on-mobile">
                 {/* Description */}
                 <div className="col-md-6">
-                  <div className="card-title">Restaurant App</div>
+                  <div className="card-title">Shaheen Super Store</div>
                   <div className="card-text">
-                    A Delightful Restaurant Menu App that Offers a Variety of
-                    Food Options
+                  An e-commerce site for browsing and purchasing products, with an admin panel for management.
                   </div>
                   <ul className="d-flex justify-content-center mt-2 list-unstyled tech-list flex-wrap gap-4">
                     <li className="shadow-lg">
@@ -24,38 +23,38 @@ export default function ShaheenSuperStore() {
                     </li>
                     <li className="shadow-lg">
                       <img
-                        src="assets/techStack/expressjs.png"
+                        src="assets/techStack/php.png"
                         alt=""
                         className="w-100"
                       />
                     </li>
                     <li className="shadow-lg">
                       <img
-                        src="assets/techStack/react.png"
+                        src="assets/techStack/html.png"
                         alt=""
                         className="w-100"
                       />
                     </li>
                     <li className="shadow-lg">
                       <img
-                        src="assets/techStack/nodejs.png"
+                        src="assets/techStack/css.png"
                         alt=""
                         className="w-100"
                       />
                     </li>
                     <li className="shadow-lg">
                       <img
-                        src="assets/techStack/tailwindcss.png"
+                        src="assets/techStack/javascript.png"
                         alt=""
                         className="w-100"
                       />
                     </li>
                   </ul>
                   <div className="card-links d-flex justify-content-center gap-4 mt-4">
-                    <a className="code">
+                    <a target="_blank" href="https://github.com/HuzaifaRizwan1231/shaheen-super-store" className="code">
                       Code <i class="fa-brands fa-github"></i>
                     </a>
-                    <a className="demo">
+                    <a target="_blank" href="http://shaheen-super-store.infinityfreeapp.com/" className="demo">
                       Live Demo <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
