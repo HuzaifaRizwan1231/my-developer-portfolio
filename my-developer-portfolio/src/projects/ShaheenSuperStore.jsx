@@ -4,7 +4,7 @@ export default function ShaheenSuperStore() {
   return (
     <>
         {/* Shaheen Super Store Project */}
-        <div className="col-md-8 m-auto col-12 projectItemOnMobile">
+        <div className="col-xl-8 col-lg-11 m-auto col-12 projectItemOnMobile">
             <div class={`card text-center my-2 shadow-lg`}>
               <div className="row invert-on-mobile">
                 {/* Description */}
@@ -13,7 +13,7 @@ export default function ShaheenSuperStore() {
                   <div className="card-text">
                   An e-commerce site for browsing and purchasing products, with an admin panel for management.
                   </div>
-                  <ul className="d-flex justify-content-center mt-2 list-unstyled tech-list flex-wrap gap-4">
+                  <ul className="d-flex justify-content-center mt-2 list-unstyled tech-list flex-wrap gap-md-2 gap-lg-4 gap-4">
                     <li className="shadow-lg">
                       <img
                         src="assets/techStack/mysql.png"

@@ -64,7 +64,7 @@ export default function Navbar(props) {
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
-          <Link className="navbar-brand"  to="/" onClick={handleLinkClick}>
+          <Link className="navbar-brand"  onClick={handleLinkClick}>
             Huzaifa Rizwan
           </Link>
           <button

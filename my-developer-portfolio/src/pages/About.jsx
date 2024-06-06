@@ -11,7 +11,7 @@ export default function About(props) {
           {/* <div className="col-md-12 d-flex">
             <img src="/assets/124560775.jpeg" alt="" className="w-100 about-image" />
           </div> */}
-          <div className="col-md-10 col-12 aboutDesc">
+          <div className="col-md-10 col-sm-12 col-12 aboutDesc">
             <h2>
               <b>ABOUT ME</b>
             </h2>
@@ -21,7 +21,7 @@ export default function About(props) {
             
             
           </div>
-          <div className="col-md-10 col-12 techStack">
+          <div className="col-md-10 col-sm-12 col-12 techStack">
            
             <h2>
               <b>TECH STACK</b>

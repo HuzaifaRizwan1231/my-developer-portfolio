@@ -4,7 +4,7 @@ export default function RFC() {
   return (
     <>
         {/* RFC Project */}
-        <div className="col-md-8 m-auto col-12 projectItemOnMobile">
+        <div className="col-xl-8 col-lg-11 m-auto col-12 projectItemOnMobile">
             <div class={`card text-center my-2 shadow-lg`}>
               <div className="row">
                 {/* Image */}
@@ -22,7 +22,7 @@ export default function RFC() {
                     A Delightful Restaurant Menu App that Offers a Variety of
                     Food Options
                   </div>
-                  <ul className="d-flex justify-content-center mt-2 list-unstyled tech-list flex-wrap gap-4">
+                  <ul className="d-flex justify-content-center mt-2 list-unstyled tech-list flex-wrap gap-md-2 gap-lg-4 gap-4">
                     <li className="shadow-lg">
                       <img
                         src="assets/techStack/mysql.png"

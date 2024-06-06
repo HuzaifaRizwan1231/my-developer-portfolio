@@ -26,7 +26,7 @@ export default function MainImage(props) {
     <>
       <div className="mainSection container-fluid">
         <div className="row mainRow">
-          <div className="col-md-7 first-section col-12 m-auto d-flex flex-column ">
+          <div className="col-sm-7 first-section col-12 m-auto d-flex flex-column ">
             <div className="mainText m-auto">
               Hi, This is Huzaifa!
               <div className="typedJSText">
@@ -39,7 +39,7 @@ export default function MainImage(props) {
             </div>
             
           </div>
-          <div className="col-md-5 second-section col-12 text-center d-flex justify-content-center align-items-end">
+          <div className="col-sm-5 second-section col-12 text-center d-flex justify-content-center align-items-end">
             <img
               src="/assets/IMG-20230922-WA0014.jpg"
               alt=""
