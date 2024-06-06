@@ -66,22 +66,27 @@ export default function ProjectItem(props) {
             </div>
             {/* Image */}
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <img
+              <a href={liveSite} target="_blank">
+                <img
                 src={`assets/${image}`}
                 alt=""
-                className="w-100 card-image shadow-sm"
-              />
+                className="w-100 card-image shadow"
+              /> 
+              </a>
+              
             </div>
             </>
             :
             <>
             {/* Image */}
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <img
+            <a href={liveSite} target="_blank">
+                <img
                 src={`assets/${image}`}
                 alt=""
-                className="w-100 card-image shadow-sm"
+                className="w-100 card-image shadow"
               />
+              </a>
             </div>
             {/* Description */}
             <div className="col-md-6">

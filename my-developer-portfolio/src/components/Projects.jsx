@@ -26,7 +26,7 @@ export default function Projects(props) {
             techUsed={["mysql", "php", "html", "css", "javascript"]}
             code="https://github.com/HuzaifaRizwan1231/shaheen-super-store"
             liveSite="http://shaheen-super-store.infinityfreeapp.com/"
-            image="rfcimage1.jpg"
+            image="shaheen.jpg"
             invert={true}
           />
         </div>
