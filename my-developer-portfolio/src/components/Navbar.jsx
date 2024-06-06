@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import ResumePDF from '/assets/HuzaifaRizwan_Resume.pdf';
+import ResumePDF from '/assets/HuzaifaRizwan_UpdatedResume.pdf';
 import { motion } from "framer-motion";
 
 export default function Navbar(props) {
@@ -77,6 +77,12 @@ export default function Navbar(props) {
           <Link className="navbar-brand"  onClick={handleLinkClick}>
             Huzaifa Rizwan
           </Link>
+          <motion.div variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
+                <a href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
+                rel="noreferrer" className="resume-link-pc active" aria-current="page" onClick={handleLinkClick}>
+                <i class="fa-solid fa-download"></i> Resume
+                </a>
+          </motion.div>
           <button
             onClick={toggleNav}
             id="side-btn"
@@ -107,6 +113,12 @@ export default function Navbar(props) {
                   Contact
                 </Link>
               </motion.li>
+              <motion.div variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
+                <a href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
+                rel="noreferrer" className="nav-link resume-link-mobile active" aria-current="page" onClick={handleLinkClick}>
+                <i class="fa-solid fa-download"></i> Resume
+                </a>
+              </motion.div>
               {/* <li className="nav-item">
                 <a className="nav-link" href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
                 rel="noreferrer">

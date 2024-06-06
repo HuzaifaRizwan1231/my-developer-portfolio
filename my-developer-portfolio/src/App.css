@@ -18,6 +18,32 @@ body{
   }
 }
 
+.resume-link-pc{
+  background-color: #1a4301;
+  color: white !important;
+  transition: all 0.5s;
+  margin-right: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  @media (max-width: 994px) {
+    display: none;
+  }
+}
+
+.resume-link-pc:hover{
+  background-color: #132a13;
+  box-shadow: var(--bs-box-shadow-lg) !important;
+}
+
+.resume-link-mobile{
+  @media (min-width: 994px) {
+    display: none;
+  }
+}
+
 .navbar-brand, .nav-link{
   color: #245501 !important;
   transition: all 0.5s;
@@ -716,6 +742,7 @@ body{
 
 .aboutDesc p{
   font-size: 28px;
+  text-align: justify;
 }
 
 .aboutDesc p span{
