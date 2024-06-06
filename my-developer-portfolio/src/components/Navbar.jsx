@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ResumePDF from '/assets/HuzaifaRizwan_Resume.pdf';
+import { motion } from "framer-motion";
 
 export default function Navbar(props) {
 
@@ -59,6 +60,15 @@ export default function Navbar(props) {
     setNavOpen(!isNavOpen);
   };
 
+  const navItemVariant = {
+    hidden: { opacity: 0, y: 10 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
   
   return (
     <>
@@ -77,26 +87,26 @@ export default function Navbar(props) {
           </button>
           <div ref={NavBarRef} className={`navbar-collapse ${isNavOpen ? "shows":"collapsings"}`}>
             <ul className="navbar-nav ms-auto my-2 mb-lg-0">
-              <li className="nav-item">
+              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/" onClick={handleLinkClick}>
                   Home
                 </Link>
-              </li>
-              <li className="nav-item" onClick={AboutClick}>
+              </motion.li>
+              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={AboutClick}>
                 <Link className="nav-link" >
                   About
                 </Link>
-              </li>
-              <li className="nav-item" onClick={ProjectsClick}>
+              </motion.li>
+              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={ProjectsClick}>
                 <Link className="nav-link">
                   Projects
                 </Link>
-              </li>
-              <li className="nav-item" onClick={ContactClick}>
+              </motion.li>
+              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={ContactClick}>
                 <Link className="nav-link">
                   Contact
                 </Link>
-              </li>
+              </motion.li>
               {/* <li className="nav-item">
                 <a className="nav-link" href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
                 rel="noreferrer">
@@ -104,26 +114,26 @@ export default function Navbar(props) {
                 </a>
               </li> */}
             
-                <li className="nav-item">
+                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
                   <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
                   <i class="fa-brands fa-github"></i>
                   <span>Github</span>
                   </Link>
-                </li>
+                </motion.li>
 
-                <li className="nav-item">
+                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
                   <Link className="nav-link" to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/" target="_blank">
                   <i class="fa-brands fa-linkedin"></i>
                   <span>LinkedIn</span>
                   </Link>
-                </li>
+                </motion.li>
 
-                <li className="nav-item">
+                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
                   <Link className="nav-link" to="https://www.instagram.com/huzaifa_rizwan1231/" target="_blank">
                   <i class="fa-brands fa-instagram"></i>
                   <span>Instagram</span>
                   </Link>
-                </li>
+                </motion.li>
               
             </ul>
           </div>
