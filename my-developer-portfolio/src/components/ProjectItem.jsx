@@ -36,7 +36,7 @@ export default function ProjectItem(props) {
         className="col-xl-8 col-lg-11 m-auto col-12 projectItemOnMobile"
       >
         <div class={`card text-center my-2 shadow-lg`}>
-          <div className="row invert-on-mobile">
+          <div className={`row ${invert ?"invert-on-mobile" : ""} `}>
 
             {invert ? 
             <>

@@ -13,6 +13,7 @@ export default function MainImage(props) {
         "<i>PHP Developer</i>",
         "<i>Full Stack Dev</i>",
       ],
+      startDelay:1000,
       typeSpeed: 50,
       loop: true,
     });

@@ -37,6 +37,15 @@ export default function Footer(props) {
       transition: { duration: 1, ease: "easeOut", delay: 0.25 },
     },
   };
+
+  const bottomLinksVariant = {
+    hidden: { opacity: 0, y:75 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut", delay: 0.25 },
+    },
+  };
   return (
     <>
       <div ref={contactRef} className="footer-section">
@@ -90,10 +99,10 @@ export default function Footer(props) {
 
         <motion.div
           ref={linksRef}
-          variants={footerLinkVariant}
+          variants={bottomLinksVariant}
           initial="hidden"
           animate={linksControls}
-          className="footer-links mt-5 gap-5"
+          className="footer-links overflow-hidden mt-5 gap-5"
         >
           <Link
             className="footer-link"
