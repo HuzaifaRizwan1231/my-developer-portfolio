@@ -2,7 +2,7 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 export default function ProjectItem(props) {
-  const { name, description, techUsed, code, liveSite, image, invert, contributors } = props;
+  const { name, description, techUsed, code, liveSite, image, invert, contributors, youtubeVideo } = props;
 
   const projectRef = useRef(null);
 
@@ -88,9 +88,14 @@ export default function ProjectItem(props) {
                 <a target="_blank" href={code} className="code">
                   Code <i class="fa-brands fa-github"></i>
                 </a>
-                <a target="_blank" href={liveSite} className="demo">
+                {liveSite &&  <a target="_blank" href={liveSite} className="demo">
                   Live Demo <i class="fa-solid fa-link"></i>
-                </a>
+                </a>}
+               
+                {youtubeVideo && <a target="_blank" href={youtubeVideo} className="demo">
+                  YouTube Link <i class="fa-brands fa-youtube"></i>
+                </a>}
+                
               </div>
             </div>
           </div>
