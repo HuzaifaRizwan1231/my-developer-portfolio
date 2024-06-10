@@ -416,6 +416,13 @@ body{
   color: #245501;
 }
 
+.card-contributors{
+  font-size: 20px;
+  color: #245501;
+  font-weight: 700;
+
+}
+
 .card-text{
   font-size: 20px;
   padding: 0px 14px;
@@ -701,6 +708,20 @@ body{
   align-items: center;
   height: 50px;
   width: 50px;
+}
+
+.contributor-list li{
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+
+.contributor-list li img{
+  border-radius: 100%;
 }
 
 .about-image{

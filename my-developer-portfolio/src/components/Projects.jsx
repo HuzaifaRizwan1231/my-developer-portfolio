@@ -18,6 +18,7 @@ export default function Projects(props) {
             liveSite="https://restaurant-menu-app-frontend.vercel.app/"
             image="rfcimage1.jpg"
             invert={false}
+            contributors={[]}
           />
           {/* Shaheen Super Store */}
           <ProjectItem
@@ -28,6 +29,18 @@ export default function Projects(props) {
             liveSite="http://shaheen-super-store.infinityfreeapp.com/"
             image="shaheen.jpg"
             invert={true}
+            contributors={[]}
+          />
+          {/* eCafe */}
+          <ProjectItem
+            name="eCafe"
+            description="Online store to order eatables for a local café with different panels for admin, manager and clerk."
+            techUsed={["mysql", "java", "spring-boot", "thymeleaf", "bootstrap"]}
+            code="https://github.com/HuzaifaRizwan1231/eCafe"
+            liveSite="https://www.youtube.com/watch/3waglUa5Ako"
+            image="eCafe.jpg"
+            invert={false}
+            contributors={[{contributor_image:"https://avatars.githubusercontent.com/u/131664477?v=4", contributor_github_link:"https://github.com/MuhammadUmar7831"}, {contributor_image:"https://avatars.githubusercontent.com/u/144957322?v=4", contributor_github_link:"https://github.com/D-Soft08"}]}
           />
         </div>
       </div>
