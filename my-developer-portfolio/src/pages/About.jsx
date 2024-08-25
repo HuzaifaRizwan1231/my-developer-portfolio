@@ -248,6 +248,14 @@ export default function About(props) {
               >
                 <img src="assets/techStack/jwt.png" alt="" className="w-100" />
               </motion.li>
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
+                <img src="assets/techStack/xml.png" alt="" className="w-100" />
+              </motion.li>
             </ul>
           </div>
         </div>

@@ -83,6 +83,37 @@ export default function Projects(props) {
             image="rfcimage1.jpg"
             invert={false}
           />
+
+          {/* FleetO */}
+          <ProjectItem
+            name="FleetO"
+            description="A Comprehensive Fleet Management App to Manage Drivers and Their Assignments."
+            techUsed={["java", "xml", "mysql", "expressjs", "nodejs"]}
+            contributors={[
+              {
+                contributor_image:
+                  "https://avatars.githubusercontent.com/u/109590443?v=4",
+                contributor_github_link:
+                  "https://github.com/MuhammadHashirWaqass",
+              },
+            ]}
+            links={[
+              {
+                name: "Code",
+                url: "https://github.com/MuhammadHashirWaqass/FleetO",
+                imageClass: "fa-brands fa-github",
+              },
+              {
+                name: "APK File",
+                url: "https://drive.google.com/file/d/1csCQ-ez77L7tP_sqblx6EVEPD9Pb6wUD/view",
+                imageClass: "fa-brands fa-android",
+              },
+            ]}
+            liveSite="https://drive.google.com/file/d/1csCQ-ez77L7tP_sqblx6EVEPD9Pb6wUD/view"
+            image="fleeto.jpg"
+            invert={true}
+          />
+
           {/* eCafe */}
           <ProjectItem
             name="eCafe"
@@ -120,7 +151,7 @@ export default function Projects(props) {
             ]}
             liveSite="https://www.youtube.com/watch/3waglUa5Ako"
             image="eCafe.jpg"
-            invert={true}
+            invert={false}
           />
         </div>
       </div>
