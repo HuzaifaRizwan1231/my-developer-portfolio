@@ -39,11 +39,11 @@ export default function Footer(props) {
   };
 
   const bottomLinksVariant = {
-    hidden: { opacity: 0, y:75 },
+    hidden: { opacity: 0, y: 75 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, ease: "easeOut", delay: 0.25 },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
   return (

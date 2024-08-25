@@ -2,7 +2,16 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
 export default function ProjectItem(props) {
-  const { name, description, techUsed, code, liveSite, image, invert, contributors, youtubeVideo } = props;
+  const {
+    name,
+    description,
+    techUsed,
+    contributors,
+    image,
+    invert,
+    links,
+    liveSite,
+  } = props;
 
   const projectRef = useRef(null);
 
@@ -63,39 +72,34 @@ export default function ProjectItem(props) {
                 ))}
               </ul>
               {/* Contributors */}
-              {contributors.length > 0 && 
-              <>
-               <div className="card-contributors">Contributors</div>
-                <ul className="d-flex justify-content-center mt-2 list-unstyled contributor-list flex-wrap gap-md-2 gap-lg-4 gap-4">
-                {contributors.map((contributor) => (
-                  <li className="shadow-lg">
-                    <a target="_blank" href={contributor.contributor_github_link}>
-                      <img
-                      src={contributor.contributor_image}
-                      alt=""
-                      className="w-100"
-                    />
-                    </a>
-                    
-                  </li>
-                ))}
-              </ul>
-              
-              </>
-              }
-              
+              {contributors.length > 0 && (
+                <>
+                  <div className="card-contributors">Contributors</div>
+                  <ul className="d-flex justify-content-center mt-2 list-unstyled contributor-list flex-wrap gap-md-2 gap-lg-4 gap-4">
+                    {contributors.map((contributor) => (
+                      <li className="shadow-lg">
+                        <a
+                          target="_blank"
+                          href={contributor.contributor_github_link}
+                        >
+                          <img
+                            src={contributor.contributor_image}
+                            alt=""
+                            className="w-100"
+                          />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
               <div className="card-links d-flex justify-content-center gap-4 mt-4">
-                <a target="_blank" href={code} className="code">
-                  Code <i class="fa-brands fa-github"></i>
-                </a>
-                {liveSite &&  <a target="_blank" href={liveSite} className="demo">
-                  Live Demo <i class="fa-solid fa-link"></i>
-                </a>}
-               
-                {youtubeVideo && <a target="_blank" href={youtubeVideo} className="demo">
-                  YouTube Link <i class="fa-brands fa-youtube"></i>
-                </a>}
-                
+                {links.map((link) => (
+                  <a target="_blank" href={link.url}>
+                    {link.name} <i class={link.imageClass}></i>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

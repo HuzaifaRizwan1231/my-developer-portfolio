@@ -11,15 +11,19 @@ export default function About(props) {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView){
-      mainControls.start("show")
+    if (isInView) {
+      mainControls.start("show");
     }
-    console.log(isInView)
-  }, [isInView])
-  
+    console.log(isInView);
+  }, [isInView]);
+
   const techStackVariant = {
-    hidden: { opacity: 0, x:-125 },
-    show: { opacity: 1, x: 0  , transition: { duration: 1, ease: "easeOut", delay:0.25 } },
+    hidden: { opacity: 0, x: -125 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, ease: "easeOut", delay: 0.25 },
+    },
   };
   return (
     <>
@@ -48,98 +52,201 @@ export default function About(props) {
             <h2>
               <b>TECH STACK</b>
             </h2>
-            <ul ref={techStackRef} className="d-flex list-unstyled skill-list flex-wrap gap-4">
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg overflow-hidden">
+            <ul
+              ref={techStackRef}
+              className="d-flex list-unstyled skill-list flex-wrap gap-4"
+            >
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg overflow-hidden"
+              >
                 <img src="assets/techStack/c++.png" alt="" className="w-100" />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/mysql.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/sql-server.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/react.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/mongodb.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img src="assets/techStack/php.png" alt="" className="w-100" />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/expressjs.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/nodejs.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/tailwindcss.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img src="assets/techStack/java.png" alt="" className="w-100" />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/spring-boot.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/thymeleaf.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/python.png"
                   alt=""
                   className="w-100"
                 />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img src="assets/techStack/html.png" alt="" className="w-100" />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img src="assets/techStack/css.png" alt="" className="w-100" />
               </motion.li>
-              <motion.li variants={techStackVariant} initial="hidden" animate={mainControls} className="shadow-lg">
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
                 <img
                   src="assets/techStack/javascript.png"
                   alt=""
                   className="w-100"
                 />
+              </motion.li>
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
+                <img
+                  src="assets/techStack/mapbox.png"
+                  alt=""
+                  className="w-100"
+                />
+              </motion.li>
+              <motion.li
+                variants={techStackVariant}
+                initial="hidden"
+                animate={mainControls}
+                className="shadow-lg"
+              >
+                <img src="assets/techStack/jwt.png" alt="" className="w-100" />
               </motion.li>
             </ul>
           </div>
