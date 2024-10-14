@@ -337,7 +337,6 @@ body{
 
 .projectItemOnMobile .card{
   @media (max-width: 540px) {
-    height: 90% !important;
     width: 100%;
   }
 }
