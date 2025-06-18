@@ -67,6 +67,7 @@ export default function ProjectItem(props) {
                       src={`assets/techStack/${tech}.png`}
                       alt=""
                       className="w-100"
+                      title={tech.toUpperCase()}
                     />
                   </li>
                 ))}

@@ -1,43 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import ResumePDF from '/assets/HuzaifaRizwan_UpdatedResume.pdf';
+import ResumePDF from "/assets/Huzaifa_Rizwan.pdf";
 import { motion } from "framer-motion";
 
 export default function Navbar(props) {
+  const { AboutLinkClick, ProjectsLinkClick, ContactLinkClick } = props;
 
-  const {AboutLinkClick, ProjectsLinkClick, ContactLinkClick} = props;
+  const handleScroll = () => {
+    window.scrollTo(0, 0);
+  };
 
-  const [scrollToTop, setscrollToTop] = useState();
-  const handleScroll = ()=>{
-    setscrollToTop(window.scrollTo(0,0));
-  }
-
-  const handleLinkClick = ()=>{
+  const handleLinkClick = () => {
     handleScroll();
     toggleNav();
-  }
+  };
 
-  const AboutClick = ()=>{
+  const AboutClick = () => {
     AboutLinkClick();
     toggleNav();
-  }
+  };
 
-  const ProjectsClick = ()=>{
+  const ProjectsClick = () => {
     ProjectsLinkClick();
     toggleNav();
-  }
+  };
 
-  const ContactClick = ()=>{
+  const ContactClick = () => {
     ContactLinkClick();
     toggleNav();
-  }
-
+  };
 
   const [isNavOpen, setNavOpen] = useState(false);
   const NavBarRef = useRef(null);
 
   useEffect(() => {
-      //handling outside click
+    //handling outside click
     const handleClickOutside = (event) => {
       if (NavBarRef.current && !NavBarRef.current.contains(event.target)) {
         const exceptionButton = document.querySelector(".exception-button");
@@ -69,54 +66,105 @@ export default function Navbar(props) {
     },
   };
 
-  
   return (
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
-          <Link className="navbar-brand"  onClick={handleLinkClick}>
+          <Link to="/" className="navbar-brand" onClick={handleLinkClick}>
             Huzaifa Rizwan
           </Link>
-          <motion.div variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                <a href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
-                rel="noreferrer" className="resume-link-pc active" aria-current="page" onClick={handleLinkClick}>
-                <i class="fa-solid fa-download"></i> Resume
-                </a>
+          <motion.div
+            variants={navItemVariant}
+            initial="hidden"
+            animate="show"
+            className="nav-item"
+          >
+            <a
+              href={ResumePDF}
+              download="Huzaifa_Rizwan_Resume"
+              target="_blank"
+              rel="noreferrer"
+              className="resume-link-pc active"
+              aria-current="page"
+              onClick={handleLinkClick}
+            >
+              <i class="fa-solid fa-download"></i> Resume
+            </a>
           </motion.div>
           <button
             onClick={toggleNav}
             id="side-btn"
             className="button-class exception-button mx-2"
           >
-            {isNavOpen ? <i class="fa-solid fa-xmark fa-xl"></i>: <i class="fa-solid fa-bars fa-lg"></i>}
-            
+            {isNavOpen ? (
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            ) : (
+              <i class="fa-solid fa-bars fa-lg"></i>
+            )}
           </button>
-          <div ref={NavBarRef} className={`navbar-collapse ${isNavOpen ? "shows":"collapsings"}`}>
+          <div
+            ref={NavBarRef}
+            className={`navbar-collapse ${isNavOpen ? "shows" : "collapsings"}`}
+          >
             <ul className="navbar-nav ms-auto my-2 mb-lg-0">
-              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/" onClick={handleLinkClick}>
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+              >
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/"
+                  onClick={handleLinkClick}
+                >
                   Home
                 </Link>
               </motion.li>
-              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={AboutClick}>
-                <Link className="nav-link" >
-                  About
-                </Link>
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+                onClick={AboutClick}
+              >
+                <Link className="nav-link">About</Link>
               </motion.li>
-              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={ProjectsClick}>
-                <Link className="nav-link">
-                  Projects
-                </Link>
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+                onClick={ProjectsClick}
+              >
+                <Link className="nav-link">Projects</Link>
               </motion.li>
-              <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item" onClick={ContactClick}>
-                <Link className="nav-link">
-                  Contact
-                </Link>
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+                onClick={ContactClick}
+              >
+                <Link className="nav-link">Contact</Link>
               </motion.li>
-              <motion.div variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                <a href={ResumePDF} download="Huzaifa_Rizwan_Resume" target="_blank"
-                rel="noreferrer" className="nav-link resume-link-mobile active" aria-current="page" onClick={handleLinkClick}>
-                <i class="fa-solid fa-download"></i> Resume
+              <motion.div
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+              >
+                <a
+                  href={ResumePDF}
+                  download="Huzaifa_Rizwan_Resume"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-link resume-link-mobile active"
+                  aria-current="page"
+                  onClick={handleLinkClick}
+                >
+                  <i class="fa-solid fa-download"></i> Resume
                 </a>
               </motion.div>
               {/* <li className="nav-item">
@@ -125,28 +173,54 @@ export default function Navbar(props) {
                   Resume
                 </a>
               </li> */}
-            
-                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                  <Link className="nav-link" to="https://github.com/HuzaifaRizwan1231" target="_blank">
+
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+              >
+                <Link
+                  className="nav-link"
+                  to="https://github.com/HuzaifaRizwan1231"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-github"></i>
                   <span>Github</span>
-                  </Link>
-                </motion.li>
+                </Link>
+              </motion.li>
 
-                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                  <Link className="nav-link" to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/" target="_blank">
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+              >
+                <Link
+                  className="nav-link"
+                  to="https://www.linkedin.com/in/huzaifa-rizwan-36b54621b/"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-linkedin"></i>
                   <span>LinkedIn</span>
-                  </Link>
-                </motion.li>
+                </Link>
+              </motion.li>
 
-                <motion.li variants={navItemVariant} initial="hidden" animate="show" className="nav-item">
-                  <Link className="nav-link" to="https://www.instagram.com/huzaifa_rizwan1231/" target="_blank">
+              <motion.li
+                variants={navItemVariant}
+                initial="hidden"
+                animate="show"
+                className="nav-item"
+              >
+                <Link
+                  className="nav-link"
+                  to="https://www.instagram.com/huzaifa_rizwan1231/"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-instagram"></i>
                   <span>Instagram</span>
-                  </Link>
-                </motion.li>
-              
+                </Link>
+              </motion.li>
             </ul>
           </div>
         </div>

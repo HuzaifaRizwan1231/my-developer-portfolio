@@ -8,12 +8,8 @@ export default function MainImage(props) {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [
-        "<i>MERN Developer</i>",
-        "<i>PHP Developer</i>",
-        "<i>Full Stack Dev</i>",
-      ],
-      startDelay:1000,
+      strings: ["<i>MERN Developer</i>", "<i>Full Stack Dev</i>"],
+      startDelay: 1000,
       typeSpeed: 50,
       loop: true,
     });
